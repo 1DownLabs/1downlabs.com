@@ -1,41 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>1DownLabs</title>
+  <meta name="description" content="1DownLabs — building intelligent data & AI systems across domains." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>1DownLabs</h1>
-    <p>AI & Data All-Rounder | Building intelligent systems across domains</p>
-    <nav>
-      <a href="#projects">Projects</a>
+
+  <!-- Top nav -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">1DownLabs</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a class="btn btn--small" href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav__menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__drawer" id="drawer" aria-hidden="true">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#writing">Writing</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
   </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/1DownLabs/python-foundations">Python Foundations</a></li>
-      <li><a href="https://github.com/1DownLabs/data-cleaning-lab">Data Cleaning Lab</a></li>
-      <li><a href="https://github.com/1DownLabs/pandas-case-studies">Pandas Case Studies</a></li>
-    </ul>
-  </section>
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">🏏 1DownLabs</p>
+        <h1 class="hero__title">
+          Build intelligent<br />
+          data & AI systems.
+        </h1>
+        <p class="hero__subtitle">
+          Portfolio of multi-domain projects: Python, analytics engineering, machine learning, and GenAI applications.
+          Crafted with a product mindset.
+        </p>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I’m a Senior BI Engineer building AI and data systems across multiple domains
-      including retail, finance, and healthcare.
-    </p>
-  </section>
+        <div class="hero__cta">
+          <a class="btn" href="#work">View Projects</a>
+          <a class="btn btn--ghost" href="https://github.com/1DownLabs" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: hello@1downlabs.com</p>
-  </section>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__num" id="repoCount">—</div>
+            <div class="stat__label">Public repos</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" id="starCount">—</div>
+            <div class="stat__label">Stars</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num" id="followerCount">—</div>
+            <div class="stat__label">Followers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature band -->
+    <section class="band">
+      <div class="band__inner">
+        <div class="band__card">
+          <h2 class="band__title">Clean. Practical. Shippable.</h2>
+          <p class="band__text">
+            Each project is built like a product: clear scope, reproducible steps, measurable outcomes,
+            and thoughtful documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work (Apple-like tiles) -->
+    <section class="section" id="work">
+      <div class="section__head">
+        <h2>Featured work</h2>
+        <p>Project tiles — built to demonstrate real-world skills.</p>
+      </div>
+
+      <div class="grid">
+        <!-- Tile 1 -->
+        <article class="tile tile--dark">
+          <div class="tile__content">
+            <p class="tile__kicker">Python</p>
+            <h3 class="tile__title">Python Foundations</h3>
+            <p class="tile__desc">Core Python notebooks and mini exercises — fundamentals that stick.</p>
+            <div class="tile__actions">
+              <a class="link" href="https://github.com/1DownLabs/python-foundations" target="_blank" rel="noreferrer">View repo →</a>
+            </div>
+          </div>
+          <div class="tile__visual" aria-hidden="true">
+            <div class="glyph">Py</div>
+          </div>
+        </article>
+
+        <!-- Tile 2 -->
+        <article class="tile">
+          <div class="tile__content">
+            <p class="tile__kicker">Data</p>
+            <h3 class="tile__title">Data Cleaning Lab</h3>
+            <p class="tile__desc">Messy datasets → clean outputs. Practical workflows with Pandas.</p>
+            <div class="tile__actions">
+              <a class="link" href="https://github.com/1DownLabs/data-cleaning-lab" target="_blank" rel="noreferrer">View repo →</a>
+            </div>
+          </div>
+          <div class="tile__visual" aria-hidden="true">
+            <div class="glyph">ETL</div>
+          </div>
+        </article>
+
+        <!-- Tile 3 -->
+        <article class="tile tile--accent">
+          <div class="tile__content">
+            <p class="tile__kicker">Analytics</p>
+            <h3 class="tile__title">Pandas Case Studies</h3>
+            <p class="tile__desc">Multi-domain EDA case studies (retail, finance, healthcare, marketing).</p>
+            <div class="tile__actions">
+              <a class="link link--dark" href="https://github.com/1DownLabs/pandas-case-studies" target="_blank" rel="noreferrer">View repo →</a>
+            </div>
+          </div>
+          <div class="tile__visual" aria-hidden="true">
+            <div class="glyph glyph--dark">EDA</div>
+          </div>
+        </article>
+
+        <!-- Auto list (latest repos) -->
+        <article class="tile tile--wide">
+          <div class="tile__content">
+            <p class="tile__kicker">Live from GitHub</p>
+            <h3 class="tile__title">Latest repositories</h3>
+            <p class="tile__desc">Auto-populated list from GitHub so the site stays up to date.</p>
+
+            <div class="repoList" id="repoList" aria-live="polite">
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+            </div>
+
+            <div class="tile__actions">
+              <a class="link" href="https://github.com/1DownLabs?tab=repositories" target="_blank" rel="noreferrer">Browse all repos →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section" id="stack">
+      <div class="section__head">
+        <h2>Tooling & stack</h2>
+        <p>Built for clarity, repeatability, and shipping.</p>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">scikit-learn</span>
+        <span class="chip">Streamlit</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">LLMs / GenAI</span>
+        <span class="chip">RAG</span>
+        <span class="chip">GitHub</span>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section class="section" id="writing">
+      <div class="section__head">
+        <h2>Writing</h2>
+        <p>Short notes as I build. (Link these later to Medium/LinkedIn.)</p>
+      </div>
+
+      <div class="cards">
+        <a class="card" href="#" aria-disabled="true">
+          <h3>Building 1DownLabs</h3>
+          <p>How I’m leveling up from BI to AI systems — one repo at a time.</p>
+          <span class="muted">Coming soon</span>
+        </a>
+
+        <a class="card" href="#" aria-disabled="true">
+          <h3>What “good” looks like</h3>
+          <p>Readable code, reproducible steps, and measurable results.</p>
+          <span class="muted">Coming soon</span>
+        </a>
+
+        <a class="card" href="#" aria-disabled="true">
+          <h3>From dashboards to agents</h3>
+          <p>How agentic AI changes analytics workflows.</p>
+          <span class="muted">Coming soon</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <h2>About</h2>
+        <p>Senior BI Engineer building next-gen analytics with AI.</p>
+      </div>
+
+      <div class="about">
+        <div class="about__box">
+          <h3>What I do</h3>
+          <p>
+            I build analytics systems and AI-powered tools that turn raw data into decision-ready insights.
+            My portfolio spans multiple domains to stay versatile and future-proof.
+          </p>
+        </div>
+        <div class="about__box">
+          <h3>What I’m building next</h3>
+          <p>
+            ML projects, GenAI agents, and product-style dashboards — with clean documentation and
+            deployable demos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section__head">
+        <h2>Contact</h2>
+        <p>Let’s talk: roles, collaborations, consulting, or project ideas.</p>
+      </div>
+
+      <div class="contact">
+        <a class="btn" href="mailto:hello@1downlabs.com">hello@1downlabs.com</a>
+        <a class="btn btn--ghost" href="https://github.com/1DownLabs" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> 1DownLabs. Built on GitHub Pages.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
